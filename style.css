@@ -1,0 +1,154 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+div.header{
+    padding: 10px 0;
+    background-color: rgba(0, 0, 255, 0.648);
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    /* width: 100%; */
+}
+
+ul.header-item-2{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+
+}
+
+div.main-body{
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 50%;
+    background-color: blue;
+    color: white;
+    height: max-content;
+    /* width: 100%; */
+}
+
+div.content-left{
+    height: 100%;
+    width: 50%;
+}
+
+div.content-right{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 5px;
+    height: 100%;
+    width: max-content;
+    margin-left: 20px;
+}
+
+div.content-right div{
+    height: 50px;
+    width: 50px;
+    border: 7px solid aqua;
+    border-radius: 2px;
+}
+
+div.lower-body{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 50px;
+    background-color: rgb(7, 138, 219);
+    /* height: 100vh; */
+}
+
+div.item{
+    width: 30%;
+    color: white;
+    background-color: blue;
+    height: 200px;
+    padding:0px 10px;
+    border-radius: 10px;
+}
+
+div.icon{
+    display: none;
+    width: 0;
+}
+div.content-wrapper{
+    padding: 0 50px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.list-container{
+
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: none;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase; */
+}
+
+ul.list{
+    font-size: 30px;
+    text-align:center;
+    list-style-type: none;
+}
+
+ul.list li{
+    margin-bottom: 20px;
+    /* text-align: justify; */
+}
+
+@media (max-width: 900px){
+    div.lower-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    div.item{
+        width: 100%;
+        padding: 0 40px;
+        margin-bottom: 20px;
+    }
+
+    div.main-body{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 50px;
+
+    }
+
+    div.main-body div.content-left{
+        width: 100%;
+    }
+
+    div.content-right{
+        margin: 20px 0;
+    }
+    div.content-wrapper{
+        display: none;
+    }
+    div.icon{
+        display: inline;
+        position: relative;
+        left: 90%;    }
+
+    div.header{
+    }
+}
